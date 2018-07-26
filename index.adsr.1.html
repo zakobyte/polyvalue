@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work Envelope</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+  <script src="./libraries/jquery.dd.min.js"></script>
+
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+  <script language="javascript" src="libraries/p5.dom.js"></script>
+  <script language="javascript" src="libraries/p5.sound.js"></script>
+  <script language="javascript" src="libraries/quicksettings.js"></script>
+
+  <script language="javascript" type="text/javascript" src="./box.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/msdropdown/dd.css" />
+  <script language="javascript" type="text/javascript" src="valueButton.js"></script>
+  <script language="javascript" type="text/javascript" src="./js/variations/adsr.js"></script>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+  <link rel="shortcut icon" href="./favicon.ico">
+  <!-- this line removes any default padding and style. you might only need one of these values set. --> 
+</head>
+
+
+<body>
+
+
+  <div id="container" class="container">
+    
+    <h1>Work Envelop Shaper - beta</h1>
+
+    <button id="btn_info" class="btn btn-info">info</button>
+    <div id="info">
+      
+      <P></P>
+     
+      <h4>A very little bit of theory</h4>
+      <P></P>
+      This will sound irrational but we are not as rational as we think we are. We make decisions based on intuitive or self-centred motives informed by the environments we are in and group norms. We subconsciously camouflage.
+      <P></P>
+      Philosophers have tried making sense of the discrepancies between self will and collective will from Kant onwards. Now neuroscience has stepped in to
+      the arena and making similar findings. (See Kahnemann - Thinking Fast, Thinking Slow for an introduction to psycho-economics.)
+      <P></P>
+      Multiple ways of considering value is Poly Value. This is a good thing. aligning viewpoints is the (he)art of sustainable competitive advantage.
+      <P></P>
+      Because we are not rational we look to provide value for ourselves as well as meeting the needs of people that pay us to make things other people buy.
+      <P></P>
+      We need to consider: Customer, Strategic, Operations, Team and Self perspectives of value.
+      
+    
+        <h4>What benefits can I expect from Polyvalue?</h4>
+        <P></P>
+          <ul>
+            <li>Visualising the unseen work to be done reduces cognitive lead time.</li>
+            <li>Build connections, resilience and autonomy to accommodate emergent requirements and behaviour.</li>
+            <li>Identify and remove blocks using A3 thinking or new found connections.</li>
+            <li>Balance and blend collective needs against self will - remove political heat from conversations.</li>
+            <li>Prioritise by Weighted Shortest - or Most Valuable Job First</li>
+            <li>Checklists to test incoming requirements</i>
+            <li>More accurate and transparent estimation focussed on value.</li>
+            <li>Visualise value from other peoples and personal perspectives</li>
+            <li>Apply the correct strategy</li>
+          </ul>
+        <P></P>
+        <P></P>
+        <h4>How do I do it?</h4>
+        <P></P>
+        Start small with Work Envelopes based on the Scan, Design, Deliver, Value cycle form the Design Thinking Toolkit. 
+        <div class="row">
+          <!--<div class="col col-sm-6 col-lg-2">
+            <img src="./images/sddv.png" /> 
+          </div>-->
+          <div class="col col-sm-6 col-lg-2">
+            <img src="./images/sddv_adsr.png" />
+          </div>
+        </div>
+        <P></P>
+     
+        <div class="col col-sm-6 col-lg-3">
+          <P>
+            1 Scan:
+            <ol type='i'>
+              <li>Assess environments</li>
+              <li>Make changes to blend in</li>
+              <li>Change attitude</li>
+            </ol>
+          </P>
+       </div>
+      
+        <div class="col col-sm-6 col-lg-3">
+          <P>
+             2  Design Thinking:
+            <ol type='i'>
+              <li>Creative Analysis First</li>
+              <li>Rational Analysis</li>
+              <li>Reflect and Plan</li>
+            </ol>
+          </P>
+        </div>
+     
+        <div class="col col-sm-6 col-lg-3">
+          <P>
+            3  Deliver:
+            <ol type='i'>
+              <li>Connect, Commit</li>
+              <li>Resilience, Test, Deliver</li>
+              <li>Autonomy, Product</li>
+            </ol>
+          </P>
+         </div>
+
+          <div class="col col-sm-6 col-lg-3">
+          <P>
+            4  Value:
+            <ol type='i'>
+              <li>Time to absorb</li>
+              <li>Impact</li>
+              <li>Reflection</li>
+            </ol>
+          </P>
+         </div>
+
+        <br>
+        If you need a refresher <a href="http://comscientia.com/blocs/sketches/cognitive-table/index.html" target="_new">read this.</a>
+        <h4>Try it out below</h4>
+        Use the presets to set work profiles. Fine tune to your needs.
+        <P></P>
+        Scan and Design move horizontally over time. They are the cognitive lead time: work that needs to be done prior to committing to delivery.
+        <P></P>
+        Effort slides vertically. Some jobs are experience based: quick and easy. Others are relatively difficult.
+        <P></P>
+        The duration of the Scan and Design and amount of effort provides a guide if the work can be done in a sprint if you are working in an agile fashion.
+        <P></P>
+      </div>
+      <P></P>
+
+      <!-- Start of app -->
+
+      <div class="row">
+       <div class="form-group">
+         <div class="col col-xs-8 col-sm-8 col-lg-4">
+           <input type="text" class="form-control" placeholder="Statement of intent"></input>
+          </div>
+          <!--<div class="col col-xs-4 col-sm-4 col-lg-2">
+            <select id = "workType" class="form-control" placeholder="Work Type">
+              <option>Task Type</option>
+              <option>Story</option>
+              <option>NFR</option>
+              <option>Spike</option>
+            </select>
+         </div>-->
+        </div>
+      </div>
+      <div class="row" style="padding-top:20px">
+        <div class="form-group">        
+          <div class="col col-xs-6 col-sm-3 col-lg-4">
+            <span>Time & Effort Presets</i>
+            <br>
+            <select id="workProfile" class="form-control, payments" >
+                
+                <option value="1" data-image="./images/icons/drum.png" data-description="">Drum - short power burst</option>                         
+                
+                <option value="2" data-image="./images/icons/horns.png" data-description="">Horns - Fast build, slow release</option>
+                <option value="3" data-image="./images/icons/strings.png" data-description="">Strings - Slight noise then resonance</option>
+                <option value="4" data-image="./images/icons/woodwind.png" data-description="">Wind - Up front work and small effort</option>
+
+                <option value="5" data-image="./images/icons/bass.png">Bass -  Slow and steady</option>
+                <option value="6" data-image="./images/icons/keyboards.png" data-description="">Keys - Like a tuned drum</option>
+                <option value="7" data-image="./images/icons/guitar.png" data-description="">Guitar - Choppy effort and little value</option>
+                
+                <option selected value="8" data-image="./images/icons/synth-basic.png" data-description="">BasicSynth - Default</option>
+                <option value="9" data-image="./images/icons/synth-lead.png" data-description="">Lead - Applied Learning</option>
+                <option value="10" data-image="./images/icons/synth-pad.png" data-description="">Pad - Max Learn </option>
+                <option value="11" data-image="./images/icons/synth-texture.png" data-description="">Texture - Contnuous power and profit</option>
+                
+            </select>
+          </div>
+
+           <div class="col col-xs-6 col-sm-3 col-lg-4">
+            <span>Value Presets</span>
+            <select id = "valueType" class="form-control" placeholder="Work Type">
+              <option value="audience">Audience Anthem - Live</option>
+              <option value="stereo">Stereo</option>
+              <option value="wos">Wall of Sound</option>
+              <option value="dab">Drum and Bass</option>
+              <option value="slapback">Slapback Echo</option>
+              <option value="reverb">Reverb</option>
+              <option value="solo">Solo</option>
+            </select>
+             <!--<select id = "workType" class="form-control" placeholder="Work Type">
+              <option>Offense - Deep V</option>
+              <option>Defence - Flat</option>
+              <option>Narrow Side</option>
+              <option>Looping back</option>
+              <option>Crash ball</option>
+              <option>In the pocket</option>
+            </select>-->
+         </div>
+        </div>
+        
+       
+       <!-- App display -->
+        <div id="sadv" class="col-xs-12 col-md-12 col-lg-12" style= "padding: 20px;border:5px">
+        </div>
+      </div>
+  </div>
+
+
+<div id="tabs">
+  <h4>Show and Test</h4>
+  <ul>
+    <li><a href="#fragment-1"><span>Weightings</span></a></li>
+    <li><a href="#fragment-2"><span>Calculations</span></a></li>
+    <li><a href="#fragment-3"><span>Strategy</span></a></li>
+    <li><a href="#fragment-4"><span>Requirements</span></a></li>
+    <!--<li><a href="#fragment-5"><span>Tasks and Tools</span></a></li>-->
+  </ul>
+  <div id="fragment-1">
+  <!--Weightings-->
+    <div class="row">
+      <span>Show and set Weightings:   </span><input id="chkWeights" type="checkbox"></input>
+    </div>
+    
+    <div class="row">
+      <div id="weightings">
+        <span>This is to be implemented - for show purposes and feedback only</span>
+        <P>
+        <div class="form-group">
+          <div class="col col-lg-4">        
+            <span>RoI Class</span>
+            <br>
+            <select id="roiType" class="form-control, value" Placehoder="ROI Class">
+                <option>Public Limited</option>
+                <option>Private Large</option>
+                <option>Private Small</option>
+                <option>VC F&F</option>
+                <option>VC Funding Rounds</option>
+                <option>VC IPO</option>
+                <option>Central Goverment</option>
+                <option>NFP</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <table class="table">
+            <tr>
+              <th>Action</th>
+              <th>Weight</th>
+            </tr>
+            <tr>
+              <td valign="top"><span style="color:red">Scan</span></td>
+              <td valign="top"><input type="text" class="form-control" value=1></td>
+            </tr>
+            <tr>
+              <td><span style="color: orange">Design</span></td>
+              <td><input type="text" class="form-control" value=1></td>
+            </tr>
+            <tr>
+              <td><span style="color:green">Deliver</span></td>
+              <td><input type="text" class="form-control" value=1></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="col-md-3">
+          <table class="table">
+            <tr>
+              <th>Value</th>
+              <th>Weight</th>
+            </tr>
+            <tr>
+              <td><span style="color:black">Customer</span></td>
+              <td><input type="text" class="form-control" value=1></td>
+            </tr>
+            <tr>
+              <td><span style="color:darkturquoise">Strategic</span></td>
+              <td><input type="text" class="form-control" value=1></td>
+            </tr>
+            <tr>
+              <td><span style="color: blue">Operations</span></td>
+              <td><input type="text" class="form-control" value=1></td>
+            </tr>
+            <tr>
+              <td><span style="color:blueviolet">Team</span></td>
+              <td><input type="text" class="form-control" value=1></td>
+            </tr>
+            <tr>
+              <td><span style="color:mediumvioletred">Self</span></td>
+              <td><input type="text" class="form-control" value=1></td>
+            </tr>
+          </table>
+          </div>
+      </div>
+  </div>
+  <!--End of Weightings-->
+
+  </div>
+  
+  <div id="fragment-2">
+   
+  <!-- Calculations -->
+   <div class="row">
+    
+      <span>Calculations:</span>
+   
+      <div id="calcs"  >
+        <div id="details" class="col-md-3">
+          <span class="label label-default" id="advise" style="font-size: 16px">Job Size</span>
+          <P></P>
+          ---<br>
+          <span class="label label-default" id="advise_value" style="font-size: 16px">Value</span>
+          <P></P>
+          ---<br>
+          <span class="label label-default" id="advise_wsjf" style="font-size: 16px">WSJF Priority</span>
+          ---<br>
+          <span class="label label-default" id="advise_mvjf" style="font-size: 16px">MVJF Priority</span>
+        </div>
+      </div>
+      
+      </div>
+   <!-- End of Calculations-->
+   </div>
+  <div id="fragment-3">
+    <div class="row">
+      <div class="col col-lg-8">
+         <label for="comment"> <h3>Meaningful Vision Statement</h3></label>
+        <textarea class="form-control" rows="10" id="comment"></textarea>
+      </div>
+      <div class="col col-lg-8">
+        <img src="./images/ghoshal_plus.jpg" class="img-responsive" />
+      </div>
+       <div class="col col-lg-8">
+        <img src="./images/seagal-horne.png" class="img-responsive" />
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <div id="fragment-4">
+    <div class="row">
+      <div class="form-group">  
+        <div class="col col-lg-4">
+          <span>Call</span>
+          <select name="sender" id="sender" class="form-control">
+            <option value="Customer">Customer</option>
+            <option value="Strategy">Strategy</option>
+            <option value="Operations">Operations</option>
+            <option value="Team">Team</option>
+            <option value="Self">Self</option>
+          </select>
+        </div>
+
+        <div class="col col-lg-4">
+          <span>Response</span>
+          <select name="receiver" id="receiver" class="form-control">
+            <option value="Customer">Customer</option>
+            <option value="Strategy">Strategy</option>
+            <option value="Operations">Operations</option>
+            <option selected value="Team">Team</option>
+            <option value="Self">Self</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  
+  <div class="row">
+       <div class="col col-lg-4">
+          <div class="form-group">
+            <label for="comment"> <h3>Requirement Tests</h3></label>
+            <br>
+            <span>Fill these in when there is confusion or lack of clarity in the reqs.</span>
+            <span>Use the appropriate channels, language and respect to seek clarity.</span>
+            <P></P>
+            <span>Do not commit to confusion.</span>
+            <br>
+            <textarea class="form-control" rows="10" id="comment"></textarea>
+          </div>
+       </div>
+        <div class="col col-lg-8">
+          <img src="./images/Lev_VCB.jpg" class="img-responsive" />
+        </div>
+        
+      <div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+</div>
+
+<script>
+   $(document).ready(function() {
+      $("#shapeTable").dataTable();
+      $(".payments").msDropdown({visibleRows:4});
+          
+  });
+  
+  $("#tabs").tabs();   
+
+  $(".payments").on('change', function(e) {
+    console.log(this.value);
+    $(".test").text(this.value);
+    //console.log(this.value);
+   });
+
+   $("#the-file-input").change(function() {
+      // will log a FileList object, view gifs below
+      console.log(this.files);
+  });
+  
+  // render the image in our view
+function renderImage(file) {
+
+  // generate a new FileReader object
+  var reader = new FileReader();
+
+  // inject an image with the src url
+  reader.onload = function(event) {
+    the_url = event.target.result
+    $('#some_container_div').html("<img src='" + the_url + "' />")
+  }
+ 
+  // when the file is read it triggers the onload event above.
+  reader.readAsDataURL(file);
+}
+ 
+// handle input changes
+$("#the-file-input").change(function() {
+    console.log(this.files)
+    
+    // grab the first image in the FileList object and pass it to the function
+    renderImage(this.files[0])
+});
+
+$("#btnInfo").click(function() {
+  toggleInfo = !toggleInfo;
+  if (toggleInfo) {
+    $("#info").show();
+  } else {
+    $("#info").hide();
+  }
+});
+
+$( function() {
+    
+  } );
+
+
+</script>
+
+</body>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>

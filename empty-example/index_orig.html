@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+  <script language="javascript" type="text/javascript" src="./libraries/p5.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+  <script language="javascript" src="libraries/p5.dom.js"></script>
+  <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
+  <!--<script language="javascript" type="text/javascript" src="sketch.js"></script>-->
+   <script language="javascript" type="text/javascript" src="./azax/four-kochs.js"></script>
+  <!-- this line removes any default padding and style. you might only need one of these values set. --> 
+   <link href="css/cyborg.css" rel="stylesheet">
+   <link rel="shortcut icon" href="./favicon.ico">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <H1>Dark Star</H1>
+    <h3>Homage to David Bowie</h3>
+    <P>
+    Bowie managed to change ahead of the market - usually successfully. If he missed he changed again. It is a cute trick that we can learn from.
+    </P>
+    <P></P>
+    <div id = "controls" class="form-group, controls"> 
+    
+      <label for="back_type">Background</label>
+      <select id="back_type" class=" form-control, back_disp"> 
+        <option name"starfield">Star Field</option>
+        <option name="forest-fire">Cellular Automata</option>
+        <option name="b-and-b">Flocking</option>
+      </select>
+      
+       <label>Sense Maker Models</label>
+        <select id="bg_type" class="bg_type"> 
+          <option name="boisot">Boisot</option>
+          <option name="cynefin">Cynefin</option>
+          <option name"ca">Cellular Automata</option>
+          <option name="nonaka">Nonaka Takeuchi</option>
+          <option name="unk-unk">Known/Unkown</option>
+        </select>
+        <P></P>
+    </div>
+    <div id="appCanvas">
+    </div>
+
+    <div>
+    <P></P>
+    Bowie detected trends, identified threats and opportunities to develop skills for tomorrow.
+    <P></P>
+    Frequent ch-ch-ch-changes of job, role and organisations ensures that reinvention is necessary to survive and succeed in the predicted future workplace - or will it be Ziggy Career Dust for you?
+    </P><P>
+    Let's learn from the star man and apply some of his creative techiques, without having to look like: a crazed doll, malevolent aristo or space cadet. Cool ginger is good, though.
+    </P><P>
+
+      There are four elements to the above model:
+      <ol type="1">
+        <li>Backgrounds - Depict continuous change.</li>
+        <li>Sense Maker Models - Collective ways of understanding the changes.</li>
+        <li>C-Star - Personal sense-making based on experience, values and beliefs.</li>
+        <li>Personas - How we appear to others and blend in or stand out of the backgrounds</li>
+      </ol>
+    
+    <P>
+   I doubt that Bowie had a career plan with personas mapped out over time. 
+   So what can we learn that is relevant to the coming changes in our workplaces?
+   </P>
+   <ul>
+     <li>Reclaim creative skills we already have</li>
+     <li>Understand that change is continuous and be ready for it.</li>
+     <li>Use personas as camouflage to blend into environments.</li>
+  </ul>
+  <P></P>
+  We will look at personal, cultural and oranisational levels to explain how we can use creativity to our advantage.
+  <P>
+If we look at the main model for education curricula planning over the last 60 or so years and compare it to the skills we need to differentiate from neuromimetic machines there is a stark difference. Do not despair.
+  </P>
+  <img src="./images/bloomland.png" />
+  <P></P>
+  Blooms Taxonomy vs George Land's research commissioned by NASA.
+  <P></P>
+  Land's findings are based on 50 years of research. I question if they are valid. My experience suggests that creativity is a process
+  and can be learned. You may have different views. 
+  <P><P>
+  Here are some simple techniques to kick start creativity in your normal jobs.
+    </P>
+  <div>
+    <P></P>
+    <H2>Personal</h2>
+  </div>
+  <P></P>
+  We may not aspire to stand out from the crowd as Bowie did but we will need to differenetiate from the neuromimetic machines that are forecast to 
+  replace many jobs. We can take the techniques that Bowie and his fine collaborators used and apply them in business contexts.
+  <P></P>
+  <div>
+  A technique Bowie used to <b>bound and relax constraints</b> was Dadaist "cut-up" word play.
+  It can be applied to business issues <a href="http://comscientia.com/blocs/bound-relax/" target="_blank">with this simple tool</a>
+  <P></P>
+  </div>
+  <div>
+    <P>
+    Brian Eno, who collaborated on the Berlin trilogy, devised a set of <b>oblique strategies</b> for personal creative work.
+    We offer a library of <a href="http://comscientia.com/training_course_examples/ctl/Personal/" target="_blank">creative problem solving techniques</a> - for business based creativity.
+    </P>
+    <P>
+    One way to invisibly change persona but <i>hang on to yourself</i> is to wear different hats using the  <a href="http://comscientia.com/blocs/blenders/debono_blender/" target="_blank">De Bono Blender</a>.
+    <P></P>
+    <a href="http://comscientia.com/blocs/blenders/debono_blender/" target="_blank"><img src="./images/sadv.png"/></a>  <img src = "./images/adsr.png" />
+    <P></P>
+    The Scan, Analyse, Design, Value cycle is an upgrade to the Plan, Do, Check, Act cycle. It is a reflection of the change from
+    manufacturing to knowledge work.
+    <P></P>
+    Since we are at the top of the Bloom taxonomy and the Land analysis we can bridge between them using synthesis.
+    <P></P>
+    In this case we use sleight of mouth and reach for a variant of the ADSR envelope to show how work can be designed.
+    <P></P>
+  
+    <P></P>
+    The basic SADV model is at the core of the <a href="http://comscientia.com/blocs/blenders/debono_blender/index_orig.html" target="_blank">Design Thinkers Toolkit</a> can be extended to 3 steps per phase
+    <P></P>
+    The elements of the larger framework include:
+    <ol type="A">
+      <li>4 characters: Curious, Creative, Critic and Crowd</li>
+      <li>Scan: Environment, Other People, Self.</li>
+      <li>Analyse: Creative, Rational, Reflect and Plan</li>
+      <li>Deliver: Connect, Resilience, Autonomy</li>
+      <li>Value: Absorb, Impact, Reflect and Next</li>
+    </ol>
+    <P></P>
+    The personas are based on the Disney Method. they can be used as sub-personas of ourself.
+    <P></P>
+    The inculsion of creative analysis makes it easy to incorporate in on our work.
+    <P></P>
+    The elements of delivery are personal metrics. For project work one may use: Committment, Application, Delivery
+    <P></P>
+    A set of worksheets for the framework can be <a href="./assets/TimeAndEmotion 10 minute execises.pptx">downloaded here</a>
+    <P></P>
+    To look into the changes that may come as the transition takes place we will use some strategic models. If they are new to you 
+    they may appear as gobbledygook on a first read. 
+    <P></P>
+  </div>
+  <P></P>
+  <P>
+    <h2>Cultural</h2>
+    <P>
+    Did Bowie keep his screw down hairdo under a hat - like a cat from Japan?
+    </P>
+    <img src="./images/jap-uk.jpg" />
+  <br>
+  Cultural norms between Japan and the United Kingdom show marked differences in individualism and attitude to risk. (Source: Hofstede)
+  </P>
+  <P>
+  When Bowie was referencing Japan the country was a paragon of dull efficiency. It is still up there but has not performed a Lazarus economic turn-around.
+  <P></P>
+  We need to be wary when implementing the best practises of Japanese production line methodologies (Kanban) to manage creative endeavours. Both creating and producing are essential to the value chains – but there are differences that can lead to frustration between strategy, operations, delivery and customers. 
+  </P>
+  <P>
+  Stepping down from global to corporate culture here are three real-world examples of climate that 
+  reflect attitude to idea time and support in different types of organisations. Which one do you work in? Which would you like to work in?
+  </P>  
+  <P> The climate dimensions measured are: Playfulness, Challenge, Risk Taking, Dynamism, Idea Time, Conflicts, Idea Support,
+     Debates, Trust and Openness and Freedom.
+     </P>
+    <img src="./images/climate-by-minty.jpg" />
+  
+    <P>
+    The above Organisational Model is Mintzbergs 'Magic' Mushroom. 
+    </P>
+    <P></P>
+        <img src="./images/minty.png" />
+    <P></P>
+    The diagram is red because globalisation and automation
+    are about to turn organisations into bloodbaths. <a href="http://uk.businessinsider.com/bank-of-england-mark-carney-technology-jobs-market-fourth-industrial-revolution-2016-12" target="_blank">According to Mark Carney 15M jobs in the UK are under threat</a>. Shareholder pressure will squeeze all parts of the business. Read on to
+    find out ways to counter the worst of the effects.<br>
+
+    </P>
+    
+    <h2>Organisational</h2>
+    <P>
+      As we move into the knowledge based era strategic value has changed:
+      <table class="table" width="50%">
+        <tr>
+          <th>Manufacturing Age</th>
+          <th>Information Economy</th>
+        </tr>
+        <tr>
+          <td>Rarity</td>
+          <td>Efficiency</td>
+        </tr>
+        <tr>
+          <td>Inimitability</td>
+          <td>Risk Reduction</td>
+        </tr>
+        <tr>
+          <td>Non-transferability</td>
+          <td>Applied Learning</td>
+        </tr>
+
+        </table>
+    </P>
+    <P>
+    Bowie was smart. He sold his back catalog as Bowie Bonds: always a step ahead of the market.<br>
+    Licensing of Intellectual Property [IP] will increase once intellectual capital audits are appreciated and in place. 
+    </P>
+    <P>
+    What IP do you have as an organisation? 
+    Can you: create, measure, protect and monetise it?  
+    </P>
+  <div id="blender">
+  </div>
+  <div>
+    A strategic framework that focuses on Efficiency, Risk Reduction and Learning is needed. Augmenting Ghoshal's framework provides that.
+    <p></P>
+    <img src="./images/goshal_black.png" />
+    <P></P>
+  </div>
+  <div>
+    If you are an Absolute Beginner to IP measures consider the following ways. 
+    <P></P>
+    <img src="./images/icas.png" />
+    <P></P>
+    Lev's Value Blueprint offer a way at programme and project level to identify the changes to the metrics used to measure value or creativity, process and deliverables. 
+    </P>
+    <img src="./images/lev_black.png" />
+    <br>
+    Value should be split to measure and retain learning as well as strategic and customer benefits.
+    </P>
+    <P>
+    if you need a Major Tom < as in Target Operating Model > update...or help implementing any of these types of fixes at personal, team, organisational or strategic levels 
+   <a href="http://comscientia.com/get-in-touch/" target="_blank">get in touch</a> 
+  </div>
+</body>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <script type="text/javascript">
+    function detectOrientation(){
+        //  Referencing the CSS rules here.      //  Change your attributes and values to match what you have set up.
+        if((window.innerHeight < window.innerWidth)){
+            return "landscape";
+        } else {
+            return "portrait";
+        }
+    }
+    $(document).ready(function(){
+        var orientation = detectOrientation();
+        //alert("Your orientation is " + orientation + "!");
+        if (orientation == "portrait") {
+            alert("Best viewed in Landsape mode. Please rotate your device");
+        };
+    });
+ </script>
+
+</html>

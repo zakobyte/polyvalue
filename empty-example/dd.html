@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript" src="./libraries/p5.js"></script>
+<script type="text/javascript" src="./libraries/p5.dom.js"></script>
+<script type="text/javascript">
+function setup() {
+  var c = createCanvas(400, 400);
+  devicePixelScaling(false);
+  background(0);
+  textSize(40);
+  text("drop it like it's hot", 40, 200);
+  c.drop(dropped, gotFile);
+}
+function dropped() {
+  background(0);
+}
+function gotFile(file) {
+  var img = createImg(file.data).hide();
+  image(img, 0, 0, width, height);
+  console.log(img)
+  noStroke();
+  for (var i=0; i<=width; i+=10) {
+    for (var j=0; j<=height; j+=10) {
+      fill(get(i, j));
+      ellipse(i, j, 10, 10);
+    }
+  }
+  stroke(0);
+  fill(255);
+  text(file.name, 20, 60);
+  text(file.size+' bytes', 20, 110);
+}
+</script>
+
+</head>
+<body>
+</body>
+</html>

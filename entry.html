@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work Envelope</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+  <script src="./libraries/jquery.dd.min.js"></script>
+
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+  <script language="javascript" src="libraries/p5.dom.js"></script>
+  <script language="javascript" src="libraries/p5.sound.js"></script>
+  <script language="javascript" src="libraries/quicksettings.js"></script>
+
+  <script language="javascript" type="text/javascript" src="./box.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/msdropdown/dd.css" />
+  <script language="javascript" type="text/javascript" src="valueButton.js"></script>
+  <!--<script language="javascript" type="text/javascript" src="./js/variations/adsr.js"></script>-->
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+  <link rel="shortcut icon" href="./favicon.ico">
+  <!-- this line removes any default padding and style. you might only need one of these values set. --> 
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row"> 
+    
+    <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <div class="row" style="background:red">
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+          <button id="btnScan" class="btn btn-link">Scan</button>
+        </div>
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+          Others
+        </div>
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+          Self
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <div class="row"  style="background:orange">
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+        <button class="btn btn-link">Creative</button>
+      </div>
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+        Rational
+      </div>
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+        Plan
+      </div>
+     </div>
+       </div>
+
+    <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <div class="row"  style="background:green">
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <button id="btnConnect" class="btn btn-link">Connect</button>
+        </div>
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          Resilience
+        </div>
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          Autonomy
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <div class="row"  style="background:blue">      
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <button id="btnAbsorb" class="btn btn-link">Absorb</button>
+        </div>
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+          Impact
+        </div>
+        <div class="col col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+          Reflect
+        </div>
+      </div>
+    </div>
+   </div>
+
+
+  <div id="content">
+    <div class="jumbotron"> 
+      The Links above will show sampler content here
+      <P></P>
+      Environment - Workspace - studio or production line
+      <br>
+      Other People - Salience and set
+      <br>
+      Self - Curious, Creative, Critic, Crowd
+      <br>
+      Creative - Div/Con, Hats
+      <br>
+      Rational - Boxes and Lines
+      <br>
+      Plan - A3 + Belbin role selection
+      <br>
+      Connection - Self to others.
+      <br>
+      Resilience - Completer Finisher, Resilince checklist
+      <br>
+      Autonomy - Self. 
+      <br>
+      Absorb - Time to accept and change
+      <br>
+      Impact - Mapping?
+      <br>
+      Reflect - Review, Retropsective
+    </div>
+  </div>
+
+</div>
+</body>
+
+<script>
+  $(".btn-link").on('click', function() {
+    console.log('bip')
+    console.log(this.innerText);
+
+    showSteps(this.innerText);
+        
+  });
+
+
+  // showSteps - for each phase present steps to consider
+  function showSteps(_phase) {
+
+    switch(_phase) {
+      case 'Scan':
+      $("#content".load('scan.html'));
+      break;
+    }
+     
+  }
+</script> 
+
+</html>
